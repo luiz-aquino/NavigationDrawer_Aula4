@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/default_padding"
+    tools:context="com.example.logonrm.navigationdrawer.navigationdrawer.Fragments.FormularioFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/valor_1"
+        android:id="@+id/tvVal1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtVal1"
+        android:layout_below="@+id/tvVal1"
+        android:hint="Valor1"
+        android:inputType="numberDecimal"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvVal2"
+        android:layout_below="@id/edtVal1"
+        android:text="@string/valor_2"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtVal2"
+        android:layout_below="@+id/tvVal2"
+        android:hint="Valor 2"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/btPlus"
+        android:onClick="calcular"
+        android:layout_below="@id/edtVal2"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:onClick="calcular"
+        android:layout_toRightOf="@+id/btPlus"
+        android:layout_below="@id/edtVal2"
+        android:id="@+id/btMinus"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:onClick="calcular"
+        android:layout_toRightOf="@+id/btMinus"
+        android:layout_below="@id/edtVal2"
+        android:id="@+id/btTimes"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/"
+        android:onClick="calcular"
+        android:id="@+id/btDivide"
+        android:layout_below="@+id/edtVal2"
+        android:layout_toRightOf="@+id/btTimes" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/resultado"
+        android:layout_below="@id/btPlus"
+        android:id="@+id/tv_hint_resultado"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvResultado"
+        android:layout_below="@+id/tv_hint_resultado" />
+
+
+</RelativeLayout>
